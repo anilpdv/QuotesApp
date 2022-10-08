@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B75EE90128F0A30F00E6B264 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EE90028F0A30F00E6B264 /* SearchBarView.swift */; };
+		B7634FE028F0A772001CFBF9 /* DiscoverCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7634FDF28F0A772001CFBF9 /* DiscoverCategories.swift */; };
+		B7634FE328F0A7FE001CFBF9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7634FE228F0A7FE001CFBF9 /* Category.swift */; };
+		B7634FE628F0AA21001CFBF9 /* QuotesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7634FE528F0AA21001CFBF9 /* QuotesList.swift */; };
+		B7634FEB28F0ADC7001CFBF9 /* TileModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7634FEA28F0ADC7001CFBF9 /* TileModifier.swift */; };
+		B7634FEE28F0B076001CFBF9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B7634FED28F0B076001CFBF9 /* Kingfisher */; };
+		B7634FF128F0CFFF001CFBF9 /* QuoteTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7634FF028F0CFFF001CFBF9 /* QuoteTileView.swift */; };
+		B7634FF328F0D121001CFBF9 /* CategoryQuoesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7634FF228F0D121001CFBF9 /* CategoryQuoesList.swift */; };
 		B7C6E19228F09D29000334D7 /* QuotesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C6E19128F09D29000334D7 /* QuotesAppApp.swift */; };
 		B7C6E19428F09D29000334D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C6E19328F09D29000334D7 /* ContentView.swift */; };
 		B7C6E19628F09D2C000334D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C6E19528F09D2C000334D7 /* Assets.xcassets */; };
@@ -34,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B75EE90028F0A30F00E6B264 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		B7634FDF28F0A772001CFBF9 /* DiscoverCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCategories.swift; sourceTree = "<group>"; };
+		B7634FE228F0A7FE001CFBF9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		B7634FE528F0AA21001CFBF9 /* QuotesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesList.swift; sourceTree = "<group>"; };
+		B7634FEA28F0ADC7001CFBF9 /* TileModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModifier.swift; sourceTree = "<group>"; };
+		B7634FF028F0CFFF001CFBF9 /* QuoteTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTileView.swift; sourceTree = "<group>"; };
+		B7634FF228F0D121001CFBF9 /* CategoryQuoesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryQuoesList.swift; sourceTree = "<group>"; };
 		B7C6E18E28F09D29000334D7 /* QuotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C6E19128F09D29000334D7 /* QuotesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesAppApp.swift; sourceTree = "<group>"; };
 		B7C6E19328F09D29000334D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7634FEE28F0B076001CFBF9 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +87,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B75EE8FE28F0A2F100E6B264 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B7634FEF28F0CFE0001CFBF9 /* Quotes */,
+				B7634FDE28F0A74E001CFBF9 /* Categories */,
+				B75EE8FF28F0A2FE00E6B264 /* SearchBar */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B75EE8FF28F0A2FE00E6B264 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				B75EE90028F0A30F00E6B264 /* SearchBarView.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		B7634FDE28F0A74E001CFBF9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B7634FDF28F0A772001CFBF9 /* DiscoverCategories.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		B7634FE128F0A7D7001CFBF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7634FE228F0A7FE001CFBF9 /* Category.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7634FE428F0AA01001CFBF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7634FE528F0AA21001CFBF9 /* QuotesList.swift */,
+				B7634FF228F0D121001CFBF9 /* CategoryQuoesList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B7634FE728F0AD8F001CFBF9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B7634FEA28F0ADC7001CFBF9 /* TileModifier.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B7634FEF28F0CFE0001CFBF9 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				B7634FF028F0CFFF001CFBF9 /* QuoteTileView.swift */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
 		B7C6E18528F09D29000334D7 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +169,10 @@
 		B7C6E19028F09D29000334D7 /* QuotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				B7634FE728F0AD8F001CFBF9 /* Utils */,
+				B7634FE428F0AA01001CFBF9 /* Views */,
+				B7634FE128F0A7D7001CFBF9 /* Models */,
+				B75EE8FE28F0A2F100E6B264 /* Components */,
 				B7C6E19128F09D29000334D7 /* QuotesAppApp.swift */,
 				B7C6E19328F09D29000334D7 /* ContentView.swift */,
 				B7C6E19528F09D2C000334D7 /* Assets.xcassets */,
@@ -143,6 +222,9 @@
 			dependencies = (
 			);
 			name = QuotesApp;
+			packageProductDependencies = (
+				B7634FED28F0B076001CFBF9 /* Kingfisher */,
+			);
 			productName = QuotesApp;
 			productReference = B7C6E18E28F09D29000334D7 /* QuotesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +297,9 @@
 				Base,
 			);
 			mainGroup = B7C6E18528F09D29000334D7;
+			packageReferences = (
+				B7634FEC28F0B076001CFBF9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = B7C6E18F28F09D29000334D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +342,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7634FE628F0AA21001CFBF9 /* QuotesList.swift in Sources */,
+				B7634FF328F0D121001CFBF9 /* CategoryQuoesList.swift in Sources */,
+				B7634FE028F0A772001CFBF9 /* DiscoverCategories.swift in Sources */,
+				B7634FE328F0A7FE001CFBF9 /* Category.swift in Sources */,
+				B7634FEB28F0ADC7001CFBF9 /* TileModifier.swift in Sources */,
 				B7C6E19428F09D29000334D7 /* ContentView.swift in Sources */,
+				B7634FF128F0CFFF001CFBF9 /* QuoteTileView.swift in Sources */,
+				B75EE90128F0A30F00E6B264 /* SearchBarView.swift in Sources */,
 				B7C6E19228F09D29000334D7 /* QuotesAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +675,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7634FEC28F0B076001CFBF9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7634FED28F0B076001CFBF9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7634FEC28F0B076001CFBF9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7C6E18628F09D29000334D7 /* Project object */;
 }

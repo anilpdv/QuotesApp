@@ -58,7 +58,7 @@ struct DiscoverCategories: View {
                                 .cornerRadius(68)
 
                             Text(category.name)
-                                .font(.custom("Avenir-Heavy", size: 10))
+                                .font(.custom("Avenir-Heavy", size: 12))
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.white)
 

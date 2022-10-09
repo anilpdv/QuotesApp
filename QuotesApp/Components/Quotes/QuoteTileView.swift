@@ -22,11 +22,12 @@ struct QuoteTileView: View {
                 Text(quote.quote)
                     .font(.custom("Avenir-Book", size: 20))
                     .foregroundColor(Color(hex: "5e6572"))
+                    .tracking(0.6)
 
                 Text("- \(quote.author)")
                     .font(.custom("Avenir-Book", size: 16))
                     .foregroundColor(Color(hex: "A9B4C2")).padding(.vertical, 2)
-
+                    .tracking(0.6)
                 HStack {
                     Spacer()
                 }

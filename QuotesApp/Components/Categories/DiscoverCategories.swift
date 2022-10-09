@@ -61,6 +61,7 @@ struct DiscoverCategories: View {
                                 .font(.custom("Avenir-Heavy", size: 12))
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.white)
+                                .tracking(0.6)
 
                         }.frame(width: 70)
                     })

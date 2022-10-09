@@ -27,6 +27,8 @@ struct SearchBarView: View {
                                             .font(.custom("Avenir-Heavy", size: 30))
                                             .foregroundColor(Color(hex: "1C2321"))
                                             .padding()
+                                            .tracking(0.6)
+                                            
                                         Spacer()
                                     }
 
@@ -85,7 +87,7 @@ struct SearchBarView: View {
                     }
 
                     TextField("", text: $searchText, onCommit: {
-                    }).foregroundColor(.white).font(.system(size: 14, weight: .semibold)).onSubmit {
+                    }).foregroundColor(.white).font(.system(size: 14, weight: .semibold)).tracking(0.8).onSubmit {
                         guard searchText.isEmpty == false else { return }
                         self.quotesModel.searchQuotes(query: searchText)
 

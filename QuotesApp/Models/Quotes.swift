@@ -28,6 +28,7 @@ class QuotesListModel: ObservableObject {
     init() {
         let urlString = "\(BASE_URL)/quotes"
         isLoading = true
+        errorMessage = ""
         guard let url = URL(string: urlString) else { return }
 
         DispatchQueue.main.async {
@@ -72,6 +73,7 @@ class QuotesListModel: ObservableObject {
     func searchQuotes(query: String) {
         let urlString = "\(BASE_URL)/search?q=\(query)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         isLoading = true
+        errorMessage = ""
         guard let url = URL(string: urlString) else { return }
 
         DispatchQueue.main.async {

@@ -7,28 +7,11 @@
 
 import SwiftUI
 
-class CategoryQuotesListModel: ObservableObject {
-    @Published var isLoading = true
-    @Published var res: Quotes?
-
-    init(categoryName: String) {
-        let urlString = "https://quotesappapi.herokuapp.com/tag/\(categoryName.lowercased())"
-
-        guard let url = URL(string: urlString) else { return }
-
-        DispatchQueue.main.async {
-            URLSession.shared.dataTask(with: url) { data, _, _ in
-                guard let data = data else { return }
-                self.res = try? JSONDecoder().decode(Quotes.self, from: data)
-            }.resume()
-        }
-    }
-}
-
 struct CategoryQuotesList: View {
     let category: Category
 
     @ObservedObject var vm: CategoryQuotesListModel
+    @State var currentIndex = 1
 
     init(category: Category) {
         self.category = category
@@ -37,11 +20,40 @@ struct CategoryQuotesList: View {
 
     var body: some View {
         ScrollView {
-            Text(category.name).font(.custom("Avenir-Heavy", size: 24))
-            ForEach(vm.res?.quotes ?? [], id: \.self) { quote in
+            if vm.isLoading {
+                HStack {
+                    ActivityIndicatorView().frame(width: 400, height: 500)
+                    Spacer()
+                }
+            } else {
+                VStack {
+                    ForEach(vm.res?.quotes ?? [], id: \.self) { quote in
 
-                QuoteTileView(quote: quote)
+                        QuoteTileView(quote: quote)
+                    }
+
+                    ScrollView(.horizontal) {
+                        HStack {
+                            ForEach(1 ..< 101, id: \.self) { num in
+                                Button(action: {
+                                    self.vm.loadPage(categoryName: category.name, pageId: num)
+                                    self.currentIndex = num
+
+                                }) {
+                                    Text("\(num)")
+                                        .frame(width: 35, height: 35)
+                                        .background(currentIndex == num ? Color(hex: "1c2321") : Color(hex: "7d98a1"))
+                                        .clipShape(Circle())
+                                        .font(.custom("Avenir-Heavy", size: 20))
+                                        .foregroundColor(Color(hex: "eef1ef"))
+                                        .id(num)
+                                }
+                            }
+                        }.padding().padding(.bottom)
+                    }.opacity(vm.isLoading ? 0 : 1)
+                }
             }
+
         }.navigationBarTitle(category.name)
     }
 }

@@ -41,6 +41,6 @@ struct QuoteTileView: View {
 
 struct QuoteTileView_Previews: PreviewProvider {
     static var previews: some View {
-        QuoteTileView(quote: .init(author: "author", img: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/authors/1282396130i/1744830._UY30_.jpg", quote: "quote"))
+        QuoteTileView(quote: .init(author: "author", img: "djfkd", quote: "quote"))
     }
 }
